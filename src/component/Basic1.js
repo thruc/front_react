@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Basic1 = (props) => {
+const Basic1 = () => {
     const clickHandler = () => {
         console.log('clicked')
     }
@@ -10,7 +10,7 @@ const Basic1 = (props) => {
 
     return (
         <>  
-            <button onClick={() => setCount(count + 1)}>Click {count}</button>
+            <button onClick={() => {setCount(preCount => preCount+ 1); setCount(preCount => preCount+ 1)}}>Click {count}</button>
 
             <h1>hello { props.name }</h1>
             
