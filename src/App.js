@@ -3,6 +3,7 @@ import './App.css';
 // import Basic2 from './component/Basic2'
 import BasicUseEffect from './component/BasicUseEffect'
 import TimerContainer from './component/TimerContainer'
+import ApiFetch from './component/ApiFetch'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {/* <Basic2 /> */}
         {/* <BasicUseEffect /> */}
-        <TimerContainer />
+        {/* <TimerContainer /> */}
+        <ApiFetch />
       </header>
     </div>
   );
