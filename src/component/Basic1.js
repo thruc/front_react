@@ -5,15 +5,22 @@ const Basic1 = () => {
         console.log('clicked')
     }
 
-    const [count, setCount] = useState(0)
+    const [product, setProduct] = useState({name: '', price: ''})
 
 
     return (
         <>  
-            <button onClick={() => {setCount(preCount => preCount+ 1); setCount(preCount => preCount+ 1)}}>Click {count}</button>
+            <form>
+                <input type='text' value={product.name}
+                onChange={evt => setProduct({...product, name: evt.target.value})}/>
+                {/* 「...product」は各要素に分解する*/}
+                <input type='text' value={product.price}
+                onChange={evt => setProduct({...product, price: evt.target.value})}/>
 
-            <h1>hello { props.name }</h1>
-            
+
+            </form>
+            <h1>Product name is { product.name }</h1>
+            <h1>Product price is { product.price }</h1>
         </>
     )
 }
